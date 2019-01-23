@@ -3,3 +3,7 @@ export const LANGUAGE_CSHARP = 'CSHARP';
 export const LANGUAGE_CPLUSPLUS = 'CPLUSPLUS';
 export const LANGUAGE_PYTHON = 'PYTHON';
 export const LANGUAGE_JAVA = 'JAVA';
+
+export const CATEGORY_SCRIPT = 'SCRIPT';
+export const CATEGORY_COMPILED = 'COMPILED';
+export const CATEGORY_INTERMEDIATE = 'INTERMEDIATE';
