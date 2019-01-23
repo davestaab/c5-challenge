@@ -5,4 +5,6 @@ export default [
   factory(1, 2, [ONE_SUCCESSFUL, FASTEST_CAT, SMALLEST_CAT, FASTEST_ALL])
 ];
 
-const factory = (challengeId, teamId, submissionStars) => ({ challengeId, teamId, submissionStars });
+function factory(challengeId, teamId, submissionStars) {
+  return { challengeId, teamId, submissionStars };
+}

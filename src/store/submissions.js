@@ -5,4 +5,12 @@ export default [
   factory(2, CATEGORY_COMPILED, LANGUAGE_CSHARP, 1, true)
 ];
 
-const factory = (id, cat, lang, teamID, successful) => ({ id, cat, lang, teamID, successful });
+function factory(id, cat, lang, teamID, successful) {
+  return {
+    id,
+    cat,
+    lang,
+    teamID,
+    successful
+  };
+}

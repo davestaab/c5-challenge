@@ -7,4 +7,6 @@ export default [
   factory(6, 'Nevada')
 ];
 
-const factory = (id, name) => ({ id, name });
+function factory(id, name) {
+  return { id, name };
+}
