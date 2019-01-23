@@ -1,12 +1,22 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import submissionStars from './store/submissionStars';
+import teams from './store/teams';
+import people from './store/people';
+import submissions from './store/submissions';
+import challenges from './store/challenges';
+import teamChallenges from './store/teamChallenges';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    submissionStars
+    submissionStars,
+    teams,
+    people,
+    submissions,
+    challenges,
+    teamChallenges
   },
   mutations: {},
   actions: {}
