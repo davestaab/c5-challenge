@@ -10,5 +10,13 @@ module.exports = {
   },
   parserOptions: {
     parser: 'babel-eslint'
-  }
+  },
+  overrides: [
+    {
+      files: ['**/*.spec.js'],
+      env: {
+        jest: true
+      }
+    }
+  ]
 };
