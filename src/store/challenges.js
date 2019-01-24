@@ -3,8 +3,7 @@ export default [
     1,
     'Egg Drop',
     `given 2 eggs, determine what floor of a building the eggs can be dropped from without breaking`,
-    '2019-03-15',
-    [1, 2]
+    '2019-03-15'
   )
 ];
 
