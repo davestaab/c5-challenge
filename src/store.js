@@ -6,6 +6,7 @@ import people from './store/people';
 import submissions from './store/submissions';
 import challenges from './store/challenges';
 import teamChallenges from './store/teamChallenges';
+import getters from './store/getters';
 
 Vue.use(Vuex);
 
@@ -18,6 +19,7 @@ export default new Vuex.Store({
     challenges,
     teamChallenges
   },
+  getters,
   mutations: {},
   actions: {}
 });
