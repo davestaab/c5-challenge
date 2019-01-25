@@ -1,8 +1,8 @@
 export default [
   factory(
     1,
-    'Egg Drop',
-    `given 2 eggs, determine what floor of a building the eggs can be dropped from without breaking`,
+    'Compelling challenge',
+    `given the ability to type, write some code`,
     '2019-03-15',
     '2019-01-31',
     '2019-01-31'
