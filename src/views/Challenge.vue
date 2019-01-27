@@ -1,10 +1,6 @@
 <template>
   <div>
-    <h2>Challenge</h2>
-    <pre
-      >{{ getCurrentChallenge }}
-</pre
-    >
+    <challenge-component :challenge="getCurrentChallenge"></challenge-component>
     <h2>Teams</h2>
     <pre>
   {{ getTeamsForChallenge(getCurrentChallenge.id) }}
@@ -21,6 +17,7 @@
 <script>
 import { mapGetters } from 'vuex';
 import flatMap from 'lodash/flatMap';
+import ChallengeComponent from '../components/ChallengeComponent';
 
 export default {
   name: 'Challenge',
@@ -29,6 +26,9 @@ export default {
     getPeople() {
       return flatMap(this.getTeamsForChallenge(this.getCurrentChallenge.id), 'members').map(this.getPersonById);
     }
+  },
+  components: {
+    ChallengeComponent
   }
 };
 </script>
