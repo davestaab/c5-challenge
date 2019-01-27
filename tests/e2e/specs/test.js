@@ -3,6 +3,25 @@
 describe('My First Test', () => {
   it('Visits the app root url', () => {
     cy.visit('/');
-    cy.contains('h1', 'Welcome to Your Vue.js App');
+    cy.contains('h1', 'home');
+  });
+  it('visits the challenge page', () => {
+    cy.visit('#/challenge/current');
+    cy.contains('h2', 'Challenge');
+  });
+  it('has a nav bar', () => {
+    cy.visit('/');
+    cy.contains('a.router-link-active', 'Home');
+    cy.contains('a', 'Challenge');
+  });
+  it('challenge link should navigate to current challenge', () => {
+    cy.visit('#/');
+    cy.get('[data-testid="challenge-link"]').click();
+    cy.url().should('contain', '#/challenge/current');
+  });
+  it('home link should navigate to home page', () => {
+    cy.visit('#/challenge/current');
+    cy.get('[data-testid="home-link"]').click();
+    cy.url().should('contain', '#/');
   });
 });
