@@ -37,6 +37,7 @@
   </div>
 </template>
 <script>
+import { mapActions } from 'vuex';
 export default {
   name: 'App',
   data() {
@@ -45,10 +46,14 @@ export default {
     };
   },
   methods: {
+    ...mapActions(['loadData']),
     handleMenu() {
       console.log('handle menu', this.menuOpen);
       this.menuOpen = !this.menuOpen;
     }
+  },
+  mounted() {
+    this.loadData();
   }
 };
 </script>

@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "yarn generateData && vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
     "test:unit": "vue-cli-service test:unit",
-    "generateData": "node scripts/generateData"
+    "generateData": "node --experimental-modules scripts/generateData"
   },
   "dependencies": {
     "lodash": "^4.17.11",

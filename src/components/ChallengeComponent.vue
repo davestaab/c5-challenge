@@ -16,15 +16,15 @@ export default {
   props: {
     challenge: {
       type: Object,
-      required: true
+      default: null
     }
   },
   computed: {
     deadline() {
-      return format(parseISO(this.challenge.eventDate), 'MMM d, yyyy');
+      return this.challenge ? format(parseISO(this.challenge.eventDate), 'MMM d, yyyy') : '';
     },
     announcementDate() {
-      return format(parseISO(this.challenge.announcementDate), 'MMM d, yyyy');
+      return this.challenge ? format(parseISO(this.challenge.announcementDate), 'MMM d, yyyy') : '';
     }
   }
 };
