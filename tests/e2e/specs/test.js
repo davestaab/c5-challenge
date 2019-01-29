@@ -7,7 +7,7 @@ describe('My First Test', () => {
   });
   it('visits the challenge page', () => {
     cy.visit('#/challenge/current');
-    cy.contains('h2', 'Challenge');
+    cy.contains('[data-testid="title"]', 'Upcoming Challenge');
   });
   it('has a nav bar', () => {
     cy.visit('/');

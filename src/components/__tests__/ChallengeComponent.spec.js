@@ -1,7 +1,7 @@
 import ChallengeComponent from '../ChallengeComponent';
 import { render } from 'vue-testing-library';
 
-it('should render challenge fields', () => {
+it("should render challenge before it's announced", () => {
   const challenge = {
     id: 5,
     title: 'test title',
@@ -11,9 +11,9 @@ it('should render challenge fields', () => {
     teamSubmissionDate: '2019-01-31'
   };
   const { getByTestId } = factory({ challenge });
-  expect(getByTestId('title')).toHaveTextContent('test title');
-  expect(getByTestId('description')).toHaveTextContent('description');
-  expect(getByTestId('deadline')).toHaveTextContent('Mar 15, 2019');
+  expect(getByTestId('title')).toHaveTextContent('Upcoming Challenge');
+  expect(getByTestId('description')).toHaveTextContent('The current challenge will be announced on Jan 31, 2019');
+  expect(getByTestId('deadline')).toHaveTextContent('Submission Deadline: Mar 15, 2019');
 });
 
 function factory(propsData) {

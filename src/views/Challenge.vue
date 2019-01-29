@@ -1,16 +1,6 @@
 <template>
   <div>
     <challenge-component :challenge="getCurrentChallenge"></challenge-component>
-    <h2>Teams</h2>
-    <pre>
-  {{ getTeamsForChallenge(getCurrentChallenge.id) }}
-  </pre
-    >
-    <h2>People</h2>
-    <pre>
-  {{ getPeople }}
-  </pre
-    >
   </div>
 </template>
 
