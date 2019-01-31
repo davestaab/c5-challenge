@@ -3,7 +3,7 @@
 describe('My First Test', () => {
   it('Visits the app root url', () => {
     cy.visit('/');
-    cy.contains('h1', 'home');
+    cy.contains('div', 'Home');
   });
   it('visits the challenge page', () => {
     cy.visit('#/challenge/current');
