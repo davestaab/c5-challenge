@@ -1,4 +1,13 @@
-# c5-challenge
+# code-bowl.io
+
+Home of the Cadre5 [code-bowl.io](https://code-bowl.io) challenge dashboard.
+
+This site will be used to announce challenges, show teams and share team results.
+
+## Site design
+The site is currently a static site hosted on netlify.
+It has no authentication currently or any write features. 
+All changes are done by commits to the code base.
 
 ## Project setup
 ```
@@ -15,11 +24,6 @@ yarn run serve
 yarn run build
 ```
 
-### Run your tests
-```
-yarn run test
-```
-
 ### Lints and fixes files
 ```
 yarn run lint
@@ -34,6 +38,3 @@ yarn run test:e2e
 ```
 yarn run test:unit
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
