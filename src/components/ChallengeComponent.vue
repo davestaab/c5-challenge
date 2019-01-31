@@ -54,6 +54,10 @@
       Team submissions are due <span class="font-bold">Feb 14, 2019 noon</span><br />
       Points will be announced after all programs have been judged.
     </base-text>
+    <div class="mb-8"></div>
+    <base-subheader>Example output</base-subheader>
+    <img src="/program-example-output.png" />
+    <div class="mb-12"></div>
   </div>
 </template>
 
