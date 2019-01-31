@@ -14,8 +14,9 @@
     <div class="mb-8"></div>
     <base-subheader>Program format</base-subheader>
     <base-text>
-      Your program should take an integer as a command line argument that represents the lowest floor at which the egg
-      will break.<br />
+      Your program should take 2 integers as a command line arguments.<br />
+      The first integer will be the number of floors of the building.<br />
+      The Second integer will represents the lowest floor at which the egg will break.<br />
       Your program should then output which floor was tried to stdout.<br />
       After each floor, your program should output ‘True’ if the egg broke or ‘False’ otherwise.<br />
       Finally your program should output ‘Floor n’ where n is the lowest floor where a drop will result in the egg
