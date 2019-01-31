@@ -1,0 +1,30 @@
+[
+    {
+        "q": "Why is it called the 2 egg problem?",
+        "a": "Because you can only drop 2 eggs."
+    },
+    {
+        "q": "Can a broken egg be dropped a second time?",
+        "a": "No."
+    },
+    {
+        "q": "Can I use libraries?",
+        "a": "You can use helper libraries, so long as they do not solve the problem."
+    },
+    {
+        "q": "How will the problem be graded?",
+        "a": "A random data set will be generated, all submissions will be tried against the data set and the average time will be used."
+    },
+    {
+        "q": "What if my program gets the wrong answer to just a few of the cases?",
+        "a": "That is an incorrect solution and will not be eligible for points."
+    },
+    {
+        "q": "What does fastest mean?",
+        "a": "A solution that finds the fewest steps on average will be favored over a program that quickly finds a solution with more drops. The primary goal is to find the fewest number of drops."
+    },
+    {
+        "q": "What if there is a tie?",
+        "a": "A larger building will be used until the runtimes diverge. If the programs do not diverge, both teams will be awarded equal points."
+    }
+]
