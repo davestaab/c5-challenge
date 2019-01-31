@@ -58,13 +58,26 @@
     <base-subheader>Example output</base-subheader>
     <img src="/program-example-output.png" />
     <div class="mb-12"></div>
+    <base-subheader>FAQ</base-subheader>
+    <div v-for="(q, i) in faq" v-bind:key="i">
+      <strong>{{ q.q }}</strong>
+      <div>{{ q.a }}</div>
+      <br />
+    </div>
   </div>
 </template>
 
 <script>
 import { parseISO, format } from 'date-fns';
+import _faq from '../../data/faq.json';
+
 export default {
   name: 'ChallengeComponent',
+  data() {
+    return {
+      faq: _faq
+    };
+  },
   props: {
     challenge: {
       type: Object,
