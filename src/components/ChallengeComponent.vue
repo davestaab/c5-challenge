@@ -58,13 +58,13 @@
     <div class="mb-8"></div>
     <base-subheader>Example output</base-subheader>
     <img src="/program-example-output.png" />
-    <div class="mb-12"></div>
+    <div class="mb-8"></div>
     <base-subheader>FAQ</base-subheader>
-    <div v-for="(q, i) in faq" v-bind:key="i">
-      <strong>{{ q.q }}</strong>
-      <div>{{ q.a }}</div>
-      <br />
+    <div v-for="(q, i) in faq" :key="i" class="mb-4">
+      <base-text class="font-bold">{{ q.q }}</base-text>
+      <base-text>{{ q.a }}</base-text>
     </div>
+    <div class="mb-12"></div>
   </div>
 </template>
 
