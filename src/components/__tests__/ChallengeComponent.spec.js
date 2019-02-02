@@ -1,4 +1,4 @@
-import ChallengeComponent from '../ChallengeComponent';
+import ChallengeComponent from '../ChallengeOneComponent';
 import { render } from 'vue-testing-library';
 
 it("should render challenge before it's announced", () => {

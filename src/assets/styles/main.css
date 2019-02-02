@@ -35,6 +35,24 @@
  * @import "components/buttons";
  * @import "components/forms";
  */
+h1 {
+    font-size: 3rem;
+    line-height: 2;
+    font-weight: normal;
+}
+h2 {
+    font-size: 1.5rem;
+    line-height: 2;
+    font-weight: normal;
+}
+h3, h4, h5, h6 {
+    font-size: 1.3rem;
+    line-height: 2;
+    font-weight: normal;
+}
+p, li {
+    line-height: 1.5;
+}
 
 /**
  * This injects all of Tailwind's utility classes, generated based on your

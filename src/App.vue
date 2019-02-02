@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="container mx-auto px-4">
+  <div id="app" class="container mx-auto px-4 mb-12">
     <nav class="flex items-center justify-between flex-wrap bg-black p-6 mb-6">
       <div class="flex items-center flex-no-shrink text-white mr-6">
         <img src="./assets/Cadre5-logo-black.png" class="h-10 mx-6" />

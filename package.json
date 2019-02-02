@@ -13,6 +13,7 @@
   "dependencies": {
     "lodash": "^4.17.11",
     "vue": "^2.5.21",
+    "vue-markdown": "^2.2.4",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },

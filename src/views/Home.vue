@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-12">
+  <div>
     <base-header>Home</base-header>
     <base-text>
       Welcome to the Cadre5 Coding Challenge

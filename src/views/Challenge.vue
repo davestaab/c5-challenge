@@ -1,20 +1,20 @@
 <template>
   <div>
-    <challenge-component :challenge="getCurrentChallenge"></challenge-component>
+    <challenge-one-component :challenge="getCurrentChallenge"></challenge-one-component>
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
-import ChallengeComponent from '../components/ChallengeComponent';
+import ChallengeOneComponent from '../components/ChallengeOneComponent';
 
 export default {
   name: 'Challenge',
   computed: {
-    ...mapGetters(['getCurrentChallenge'])
+    ...mapGetters(['getCurrentChallenge', 'isCurrentChallengeAnnounced'])
   },
   components: {
-    ChallengeComponent
+    ChallengeOneComponent
   }
 };
 </script>
