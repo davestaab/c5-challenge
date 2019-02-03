@@ -48,7 +48,6 @@ export default {
   methods: {
     ...mapActions(['loadData']),
     handleMenu() {
-      console.log('handle menu', this.menuOpen);
       this.menuOpen = !this.menuOpen;
     }
   },
