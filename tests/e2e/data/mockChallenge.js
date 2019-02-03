@@ -3,7 +3,7 @@ export default {
     return {
       challenges: [
         {
-          id: 1,
+          id: 2,
           title: 'Compelling challenge',
           description: 'given the ability to type, write some code',
           eventDate: '2019-03-11',

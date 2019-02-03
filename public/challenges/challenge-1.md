@@ -1,4 +1,4 @@
-# Challenge: The two egg problem
+# Challenge: The Two Egg Problem
 
 ## Conditions
 

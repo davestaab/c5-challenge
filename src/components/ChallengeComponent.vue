@@ -1,5 +1,5 @@
 <template>
-  <vue-markdown data-testid="" :source="writeUp"></vue-markdown>
+  <vue-markdown data-testid="challengeDescription" :source="writeUp"></vue-markdown>
 </template>
 
 <script>
@@ -30,7 +30,6 @@ export default {
     challenge: {
       immediate: true,
       handler: function(newVal) {
-        console.log('updated challenge', newVal);
         if (newVal.id) {
           this.getChallengeWriteup(newVal.id);
         }

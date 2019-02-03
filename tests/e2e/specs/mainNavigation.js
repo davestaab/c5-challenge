@@ -1,13 +1,13 @@
 // https://docs.cypress.io/api/introduction/api.html
 
-describe('My First Test', () => {
+describe('Navigation', () => {
   it('Visits the app root url', () => {
     cy.visit('/');
     cy.contains('div', 'Home');
   });
   it('visits the challenge page', () => {
     cy.visit('#/challenge/current');
-    cy.contains('[data-testid="title"]', 'Upcoming Challenge');
+    cy.contains('[data-testid="challengeDescription"]', 'Challenge: The Two Egg Problem');
   });
   it('has a nav bar', () => {
     cy.visit('/');
