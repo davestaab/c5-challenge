@@ -7,7 +7,7 @@ describe('Navigation', () => {
   });
   it('visits the challenge page', () => {
     cy.visit('#/challenge/current');
-    cy.contains('[data-testid="challengeDescription"]', 'Challenge: The Two Egg Problem');
+    cy.get('[data-testid="challengeDescription"]').should('exist');
   });
   it('has a nav bar', () => {
     cy.visit('/');
