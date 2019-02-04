@@ -6,8 +6,11 @@ version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
-      - image: circleci/node:8.12
+      # the Docker image with Cypress dependencies
+      - image: cypress/base:8
+        environment:
+          ## this enables colors in the output
+          TERM: xterm
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -15,6 +18,7 @@ jobs:
       # - image: circleci/mongo:3.4.4
 
     working_directory: ~/repo
+    parallelism: 1
 
     steps:
       - checkout
@@ -35,6 +39,6 @@ jobs:
 
       # run tests!
       - run: yarn test:unit
-      - run: yarn test:e2e
+#      - run: yarn test:e2e
 
 

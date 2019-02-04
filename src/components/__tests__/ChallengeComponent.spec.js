@@ -1,23 +1,36 @@
 import ChallengeComponent from '../ChallengeComponent';
-import { render } from 'vue-testing-library';
+import { render, wait } from 'vue-testing-library';
+import BaseHeader from '../BaseHeader';
+import BaseSubheader from '../BaseSubheader';
+import BaseText from '../BaseText';
+import VueMarkdown from 'vue-markdown';
+beforeEach(() => {
+  fetch.resetMocks();
+});
 
-it("should render challenge before it's announced", () => {
+it('should render challenge writeup', async () => {
+  fetch.mockResponseOnce('# new challenge title\n## subtitle');
   const challenge = {
-    id: 5,
-    title: 'test title',
-    description: 'description',
-    eventDate: '2019-03-15',
-    announcementDate: '2019-01-31',
-    teamSubmissionDate: '2019-01-31'
+    id: 5
   };
-  const { getByTestId } = factory({ challenge });
-  expect(getByTestId('title')).toHaveTextContent('Upcoming Challenge');
-  expect(getByTestId('description')).toHaveTextContent('The current challenge will be announced on Jan 31, 2019');
-  expect(getByTestId('deadline')).toHaveTextContent('Submission Deadline: Mar 15, 2019');
+  const { getByTestId, container } = factory({ challenge });
+  await wait();
+  expect(getByTestId('challengeDescription')).toHaveTextContent('new challenge title');
+  expect(container.firstChild).toContainHTML('<h1>new challenge title</h1>');
+  expect(container.firstChild).toContainHTML('<h2>subtitle</h2>');
 });
 
 function factory(propsData) {
-  return render(ChallengeComponent, {
-    propsData
-  });
+  return render(
+    ChallengeComponent,
+    {
+      propsData
+    },
+    localVue => {
+      localVue.component('BaseHeader', BaseHeader);
+      localVue.component('BaseSubheader', BaseSubheader);
+      localVue.component('BaseText', BaseText);
+      localVue.component('VueMarkdown', VueMarkdown);
+    }
+  );
 }
