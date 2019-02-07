@@ -20,9 +20,9 @@
     <base-text class="mb-3">
       You are free to use any “production ready” language. If you could use it in a production application at Cadre5,
       you can use it for the programming challenge. For scoring purposes, languages will be divided into three
-      categories; <span class="font-bold">Scripting Languages</span> (i.g. Python, JavaScript),
-      <span class="font-bold">Intermediate Languages</span> (i.g. C#, Java), and
-      <span class="font-bold">Systems Languages</span> (i.g. C/C++).
+      categories; <span class="font-bold">Scripting Languages</span> (e.g. Python, JavaScript),
+      <span class="font-bold">Intermediate Languages</span> (e.g. C#, Java), and
+      <span class="font-bold">Systems Languages</span> (e.g. C/C++).
     </base-text>
     <base-subheader>
       How will submissions be scored?
