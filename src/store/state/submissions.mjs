@@ -6,12 +6,12 @@ export default [
   factory(2, CATEGORY_COMPILED, LANGUAGE_CSHARP, 1, 1, true)
 ];
 
-function factory(id, cat, lang, teamID, challengeId, successful) {
+function factory(id, cat, lang, teamId, challengeId, successful) {
   return {
     id,
     cat,
     lang,
-    teamID,
+    teamId,
     challengeId,
     successful
   };
