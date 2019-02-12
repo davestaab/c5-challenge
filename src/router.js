@@ -14,6 +14,7 @@ export default new Router({
     {
       path: '/challenge/current',
       name: 'challenge',
+      redirect: '/challenge/current/description',
       component: () => import(/* webpackChunkName: "challenge" */ './views/Challenge.vue'),
 
       children: [
