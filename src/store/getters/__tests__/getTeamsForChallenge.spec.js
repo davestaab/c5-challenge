@@ -69,12 +69,14 @@ it('should get teams for challenge', () => {
           challengeId: 1
         }
       ],
-      submissionStars
+      submissionStars,
+      starCount: 2
     },
     {
       id: 3,
       submissions: [],
-      submissionStars
+      submissionStars,
+      starCount: 2
     }
   ]);
 });
