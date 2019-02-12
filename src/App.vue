@@ -26,7 +26,7 @@
           >
           <router-link
             data-testid="challenge-link"
-            to="/challenge/current"
+            to="/challenge/current/description"
             class="block mt-4 lg:inline-block lg:mt-0 text-black-lighter text-white hover:text-red mr-4"
             >Challenge</router-link
           >

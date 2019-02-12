@@ -57,7 +57,7 @@
       More Info
     </base-subheader>
     <base-text>
-      Check out the <router-link to="/challenge/current">Challenge</router-link> page for more info.
+      Check out the <router-link to="/challenge/current/description">Challenge</router-link> page for more info.
     </base-text>
   </div>
 </template>

@@ -14,10 +14,20 @@ export default new Router({
     {
       path: '/challenge/current',
       name: 'challenge',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "challenge" */ './views/Challenge.vue')
+      component: () => import(/* webpackChunkName: "challenge" */ './views/Challenge.vue'),
+
+      children: [
+        {
+          path: 'results',
+          name: 'results',
+          component: () => import(/* webpackChunkName: "results" */ './components/Results.vue')
+        },
+        {
+          path: 'description',
+          name: 'description',
+          component: () => import(/* webpackChunkName: "description" */ './components/Description.vue')
+        }
+      ]
     }
   ]
 });

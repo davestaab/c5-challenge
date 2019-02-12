@@ -1,24 +1,20 @@
 <template>
-  <vue-markdown data-testid="challengeDescription" :source="writeUp"></vue-markdown>
+  <vue-markdown data-testid="description" :source="writeUp"></vue-markdown>
 </template>
 
 <script>
 import { parseISO, format } from 'date-fns';
+import { mapGetters } from 'vuex';
 
 export default {
-  name: 'ChallengeComponent',
+  name: 'Description',
   data() {
     return {
       writeUp: ''
     };
   },
-  props: {
-    challenge: {
-      type: Object,
-      default: null
-    }
-  },
   computed: {
+    ...mapGetters(['getCurrentChallenge']),
     deadline() {
       return this.challenge ? format(parseISO(this.challenge.eventDate), 'MMM d, yyyy') : '';
     },
@@ -27,7 +23,7 @@ export default {
     }
   },
   watch: {
-    challenge: {
+    getCurrentChallenge: {
       immediate: true,
       handler: function(newVal) {
         if (newVal.id) {
