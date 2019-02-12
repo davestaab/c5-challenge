@@ -1,4 +1,4 @@
-import ChallengeComponent from '../ChallengeComponent';
+import Description from '../Description';
 import { render, wait } from 'vue-testing-library';
 import BaseHeader from '../BaseHeader';
 import BaseSubheader from '../BaseSubheader';
@@ -22,7 +22,7 @@ it('should render challenge writeup', async () => {
 
 function factory(propsData) {
   return render(
-    ChallengeComponent,
+    Description,
     {
       propsData
     },

@@ -6,8 +6,8 @@ describe('Navigation', () => {
     cy.contains('div', 'Home');
   });
   it('visits the challenge page', () => {
-    cy.visit('#/challenge/current');
-    cy.get('[data-testid="challengeDescription"]').should('exist');
+    cy.visit('#/challenge/current/description');
+    cy.get('[data-testid="description"]').should('exist');
   });
   it('has a nav bar', () => {
     cy.visit('/');

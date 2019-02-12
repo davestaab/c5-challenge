@@ -26,7 +26,7 @@ describe('challenge page', () => {
     const fetchChallengeTwo = deferred();
     // set date to Jan 15, 2019
     cy.clock(new Date(2019, 0, 20, 12, 0, 1));
-    cy.visit('#/challenge/current', {
+    cy.visit('#/challenge/current/description', {
       onBeforeLoad(win) {
         cy.stub(win, 'fetch')
           .onFirstCall()
@@ -42,7 +42,7 @@ describe('challenge page', () => {
       }
     });
     // should render challengeOne
-    cy.get('[data-testid="challengeDescription"]').should('exist');
-    cy.get('[data-testid="challengeDescription"]').should('contain', 'Challenge Two');
+    cy.get('[data-testid="description"]').should('exist');
+    cy.get('[data-testid="description"]').should('contain', 'Challenge Two');
   });
 });
