@@ -53,6 +53,9 @@ h3, h4, h5, h6 {
 p, li {
     line-height: 1.5;
 }
+a {
+    text-decoration: none;
+}
 
 /**
  * This injects all of Tailwind's utility classes, generated based on your
