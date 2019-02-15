@@ -81,10 +81,8 @@ a {
  * @import "utilities/background-patterns";
  * @import "utilities/skew-transforms";
  */
-@screen sm {
-    .table-responsive {
-        width: config('screens.md');
-    }
+.table-responsive {
+    width: config('screens.md');
 }
 @screen md {
     .table-responsive {
