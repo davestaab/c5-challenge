@@ -1,10 +1,21 @@
 export default [
-  factory(1, 'Steve'),
-  factory(2, 'Ken'),
-  factory(3, 'Chris'),
-  factory(4, 'Matt'),
-  factory(5, 'Colin'),
-  factory(6, 'Nevada')
+  factory(1, 'Sara'),
+  factory(2, 'Marshall'),
+  factory(3, 'Jocelyn'),
+
+  factory(4, 'Jill'),
+  factory(5, 'Dakota'),
+  factory(6, 'Gabriel'),
+
+  factory(7, 'Aaron'),
+  factory(8, 'Mark'),
+  factory(9, 'Dave'),
+
+  factory(10, 'Thad'),
+
+  factory(11, 'Caleb'),
+  factory(12, 'Kayleigh'),
+  factory(13, 'James')
 ];
 
 function factory(id, name) {

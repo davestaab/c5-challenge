@@ -1,8 +1,11 @@
 import { FASTEST_ALL, FASTEST_CAT, ONE_SUCCESSFUL, SMALLEST_ALL, SMALLEST_CAT } from './submissionStars';
 
 export default [
-  factory(1, 1, [ONE_SUCCESSFUL, SMALLEST_ALL, FASTEST_CAT, SMALLEST_CAT]),
-  factory(1, 2, [ONE_SUCCESSFUL, FASTEST_CAT, SMALLEST_CAT, FASTEST_ALL])
+  factory(1, 1, []),
+  factory(1, 2, []),
+  factory(1, 3, []),
+  factory(1, 4, []),
+  factory(1, 5, [])
 ];
 
 function factory(challengeId, teamId, submissionStars) {

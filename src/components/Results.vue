@@ -18,8 +18,9 @@ export default {
 
 <template>
   <div class="overflow-auto">
+    <base-header>Results: {{ getCurrentChallenge.title }}</base-header>
     <table class="table-responsive text-left w-full my-6">
-      <thead class="bg-black text-red">
+      <thead class="border-b border-red text-black">
         <tr>
           <th class="p-4">Team</th>
           <th class="p-4">Submissions</th>
