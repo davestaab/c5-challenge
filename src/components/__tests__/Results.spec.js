@@ -40,10 +40,10 @@ it('should render challenge title', async () => {
 it('should show table with results', async () => {
   const { getByTestId, getAllByTestId, queryByText, getAllByText } = factory();
   // headers
-  expect(getByTestId('resultTable')).toContainHTML('<th class="p-4">Team</th>');
-  expect(getByTestId('resultTable')).toContainHTML('<th class="p-4">Members</th>');
-  expect(getByTestId('resultTable')).toContainHTML('<th class="p-4">Scoring</th>');
-  expect(getByTestId('resultTable')).toContainHTML('<th class="p-4">Stars</th>');
+  expect(getByTestId('resultTable')).toContainElement(queryByText('Team'));
+  expect(getByTestId('resultTable')).toContainElement(queryByText('Members'));
+  expect(getByTestId('resultTable')).toContainElement(queryByText('Scoring'));
+  expect(getByTestId('resultTable')).toContainElement(queryByText('Stars'));
   // table
   expect(getAllByTestId('resultRow').length).toBe(2);
   // first row
