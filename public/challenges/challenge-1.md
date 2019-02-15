@@ -75,7 +75,7 @@ A random data set will be generated, all submissions will be tried against the d
 That is an incorrect solution and will not be eligible for points.
 
 ### **What does fastest mean?**
-A solution that finds the fewest steps on average will be favored over a program that quickly finds a solution with more drops. The primary goal is to find the fewest number of drops.
+A solution that finds the fewest steps on average will be favored over a program that quickly finds a solution with more drops. The primary goal is to find the fewest number of drops. Between solutions with equal number of drops, the fastest execution time will win.
 
  ### **What if there is a tie?**
 A larger building will be used until the runtimes diverge. If the programs do not diverge, both teams will be awarded equal points.
