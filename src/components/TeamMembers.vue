@@ -1,8 +1,8 @@
 <script>
 export default {
-  name: 'TeamScore',
+  name: 'TeamMembers',
   props: {
-    submissionStars: {
+    members: {
       type: Array,
       default() {
         return [];
@@ -11,9 +11,8 @@ export default {
   }
 };
 </script>
-
 <template>
   <td class="p-4">
-    <base-text v-for="(s, i) in submissionStars" :key="i">{{ s.title }}</base-text>
+    <base-text v-for="m in members" :key="m.id">{{ m.name }}</base-text>
   </td>
 </template>

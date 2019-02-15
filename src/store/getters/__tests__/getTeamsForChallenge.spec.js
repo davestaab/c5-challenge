@@ -22,13 +22,16 @@ it('should get teams for challenge', () => {
     ],
     teams: [
       {
-        id: 1
+        id: 1,
+        members: [1]
       },
       {
-        id: 2
+        id: 2,
+        members: [2]
       },
       {
-        id: 3
+        id: 3,
+        members: [3]
       }
     ],
     submissions: [
@@ -52,6 +55,15 @@ it('should get teams for challenge', () => {
         teamId: 2,
         challengeId: 1
       }
+    ],
+    people: [
+      {
+        name: 'john'
+      },
+      {},
+      {
+        name: 'jane'
+      }
     ]
   };
   expect(getTeamsForChallenge(state)(1)).toEqual([
@@ -70,13 +82,15 @@ it('should get teams for challenge', () => {
         }
       ],
       submissionStars,
-      starCount: 2
+      members: [1],
+      people: [{ name: 'john' }]
     },
     {
       id: 3,
       submissions: [],
       submissionStars,
-      starCount: 2
+      members: [3],
+      people: [{ name: 'jane' }]
     }
   ]);
 });

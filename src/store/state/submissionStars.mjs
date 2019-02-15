@@ -13,3 +13,4 @@ export const FASTEST_ALL = factory(7, 'Fastest Overall', 2);
 export const FASTEST_CAT = factory(5, 'Fastest in Category', 1);
 export const SMALLEST_ALL = factory(6, 'Smallest Overall', 1);
 export const SMALLEST_CAT = factory(4, 'Smallest in Category', 1);
+export const TIE_BREAKER = factory(8, 'Tie Breaker', 1);

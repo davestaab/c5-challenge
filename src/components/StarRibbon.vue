@@ -21,7 +21,7 @@ export default {
 </script>
 
 <template>
-  <div>
+  <td class="p-4">
     <span v-for="(s, i) in starsArray" :key="i">{{ s }}</span>
-  </div>
+  </td>
 </template>
