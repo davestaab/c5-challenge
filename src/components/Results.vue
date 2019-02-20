@@ -2,7 +2,6 @@
 import { mapGetters } from 'vuex';
 import TeamScore from './TeamScore';
 import StarRibbon from './StarRibbon';
-import orderBy from 'lodash/orderBy';
 import TeamMembers from './TeamMembers';
 
 export default {
@@ -10,7 +9,7 @@ export default {
   computed: {
     ...mapGetters(['getTeamsForChallenge', 'getCurrentChallenge']),
     teams() {
-      return orderBy(this.getTeamsForChallenge(this.getCurrentChallenge.id), ['starCount'], ['desc']);
+      return this.getTeamsForChallenge(this.getCurrentChallenge.id);
     }
   },
   components: { TeamMembers, TeamScore, StarRibbon }

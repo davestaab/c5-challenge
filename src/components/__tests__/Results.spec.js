@@ -17,14 +17,16 @@ beforeEach(() => {
       getTeamsForChallenge: () => () => {
         return [
           {
-            name: 'alpha team',
-            submissionStars: [ONE_SUCCESSFUL, THREE_SUCCESSFUL],
-            people: [{ name: 'adam' }, { name: 'ben' }]
-          },
-          {
             name: 'beta team',
+            starCount: 4,
             submissionStars: [ONE_SUCCESSFUL, THREE_SUCCESSFUL],
             people: [{ name: 'cedric' }, { name: 'dan' }]
+          },
+          {
+            name: 'alpha team',
+            submissionStars: [THREE_SUCCESSFUL],
+            starCount: 3,
+            people: [{ name: 'adam' }, { name: 'ben' }]
           }
         ];
       }
@@ -47,13 +49,14 @@ it('should show table with results', async () => {
   // table
   expect(getAllByTestId('resultRow').length).toBe(2);
   // first row
-  expect(getAllByTestId('resultRow')[0]).toContainElement(queryByText('adam'));
-  expect(getAllByTestId('resultRow')[0]).toContainElement(queryByText('ben'));
+  expect(getAllByTestId('resultRow')[0]).toContainElement(queryByText('beta team'));
+  expect(getAllByTestId('resultRow')[0]).toContainElement(queryByText('cedric'));
+  expect(getAllByTestId('resultRow')[0]).toContainElement(queryByText('dan'));
   expect(getAllByTestId('resultRow')[0]).toContainElement(queryByText('Successful Submission!'));
   expect(getAllByTestId('resultRow')[0]).toContainElement(queryByText('Three Submissions!'));
   expect(getAllByTestId('resultRow')[0]).toContainElement(queryByText('⭐'));
   // totals stars should be 12
-  expect(getAllByText('⭐').length).toBe(12);
+  expect(getAllByText('⭐').length).toBe(11);
 });
 
 function factory() {

@@ -1,23 +1,18 @@
 import getTeamsForChallenge from '../getTeamsForChallenge';
-import { ONE_SUCCESSFUL, SMALLEST_CAT } from '../../state/submissionStars';
+import { ONE_SUCCESSFUL, THREE_SUCCESSFUL } from '../../state/submissionStars';
 
 it('should get teams for challenge', () => {
-  const submissionStars = [ONE_SUCCESSFUL, SMALLEST_CAT];
   const state = {
     teamChallenges: [
       {
         teamId: 1,
         challengeId: 1,
-        submissionStars
-      },
-      {
-        teamId: 2,
-        challengeId: 2
+        submissionStars: [ONE_SUCCESSFUL]
       },
       {
         teamId: 3,
         challengeId: 1,
-        submissionStars
+        submissionStars: [THREE_SUCCESSFUL]
       }
     ],
     teams: [
@@ -43,16 +38,11 @@ it('should get teams for challenge', () => {
       {
         id: 2,
         teamId: 1,
-        challengeId: 1
-      },
-      {
-        id: 2,
-        teamId: 1,
         challengeId: 2
       },
       {
-        id: 2,
-        teamId: 2,
+        id: 3,
+        teamId: 3,
         challengeId: 1
       }
     ],
@@ -68,29 +58,32 @@ it('should get teams for challenge', () => {
   };
   expect(getTeamsForChallenge(state)(1)).toEqual([
     {
+      id: 3,
+      submissions: [
+        {
+          id: 3,
+          teamId: 3,
+          challengeId: 1
+        }
+      ],
+      submissionStars: [THREE_SUCCESSFUL],
+      starCount: 5,
+      members: [3],
+      people: [{ name: 'jane' }]
+    },
+    {
       id: 1,
       submissions: [
         {
           id: 1,
           teamId: 1,
           challengeId: 1
-        },
-        {
-          id: 2,
-          teamId: 1,
-          challengeId: 1
         }
       ],
-      submissionStars,
+      submissionStars: [ONE_SUCCESSFUL],
+      starCount: 1,
       members: [1],
       people: [{ name: 'john' }]
-    },
-    {
-      id: 3,
-      submissions: [],
-      submissionStars,
-      members: [3],
-      people: [{ name: 'jane' }]
     }
   ]);
 });

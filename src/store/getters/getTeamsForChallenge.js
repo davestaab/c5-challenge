@@ -7,8 +7,10 @@ const getTeamsForChallenge = ({ teamChallenges, teams, submissions, people }) =>
       t.submissionStars = teamChallenges.find(
         tc => tc.challengeId === challengeId && tc.teamId === t.id
       ).submissionStars;
+      t.starCount = t.submissionStars.reduce((sum, s) => sum + s.stars, 0);
       t.people = t.members.map(m => people[m - 1]);
       return t;
-    });
+    })
+    .sort((a, b) => b.starCount - a.starCount);
 };
 export default getTeamsForChallenge;
