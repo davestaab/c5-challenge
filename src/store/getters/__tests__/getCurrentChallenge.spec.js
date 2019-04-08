@@ -7,6 +7,9 @@ it('should return the most recent challenge', () => {
         eventDate: '2018-10-31'
       },
       {
+        eventDate: '2019-03-15'
+      },
+      {
         eventDate: '2019-01-31'
       }
     ]

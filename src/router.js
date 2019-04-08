@@ -13,9 +13,9 @@ export default new Router({
       component: Home
     },
     {
-      path: '/challenge/current',
+      path: '/challenge/:id',
       name: 'challenge',
-      redirect: '/challenge/current/description',
+      redirect: '/challenge/:id/description',
       component: () => import(/* webpackChunkName: "challenge" */ './views/Challenge.vue'),
 
       children: [
@@ -30,6 +30,11 @@ export default new Router({
           component: () => import(/* webpackChunkName: "description" */ './components/Description.vue')
         }
       ]
+    },
+    {
+      name: 'challenges',
+      path: '/challenges',
+      component: () => import(/* webpackChunkName: "challengeList" */ './views/ChallengeList')
     }
   ]
 });
